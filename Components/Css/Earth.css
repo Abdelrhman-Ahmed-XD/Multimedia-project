@@ -1,0 +1,75 @@
+.earth {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 3px 3px 60px rgb(255, 255, 255);
+    transition: all 11s ease;
+    transform: scale(1.4);
+    transform: translate(20px, 30px);
+    border-radius: 500px;
+
+}
+
+.earth div {
+    height: 100%;
+    width: 200%;
+    animation: spin 11s linear alternate infinite forwards;
+
+    background: url("../../Assets/Earth.jpg");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes spin {
+    to {
+        transform: translateX(-50%);
+
+    }
+
+}
+
+.earth:hover {
+    transform: scale(1.4);
+}
+
+@media (max-width: 600px) {
+
+    nav,
+    :active {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+img {
+    width:100%;
+    height: 100%;
+
+}
+
+.country2 {
+    position: absolute;
+    cursor: pointer;
+}
+
+
+.label {
+    position: absolute;
+    top: 8%;
+    left: 4%;
+
+    color: white;
+    font-size: 90px;
+    text-shadow: 2px 2px 22px;
+    /*border: 4px solid blue;
+  box-shadow: 4px 4px 15px; */
+}

@@ -1,0 +1,222 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f9;
+    color: #333;
+    height: 100%;
+}
+
+header {
+    background: #222;
+    color: #ffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    position: relative; /* Ensure the header stays on top */
+    z-index: 1; /* Keeps the header above the hero section */
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.hero {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url("../../Assets/Mausoleum at Halicarnassus(New).jpg ") center/cover no-repeat;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:darkslategrey;
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 4.4rem;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Enhanced Styling for the Explore Temple Section */
+.explore-temple {
+    padding: 60px 20px;
+    background-color: #fefefe;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 90%;
+}
+
+.explore-temple h2 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.explore-temple p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    line-height: 1.8;
+    margin: 0 auto;
+    color: #555;
+}
+
+.explore-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: start;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.explore-content div {
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.explore-content div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.video-section iframe {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    border: none;
+}
+
+.quick-facts ul, .reference-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-facts ul li, .reference-links ul li {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quick-facts ul li::before {
+    content: "\2022"; /* Unicode for bullet point */
+    color: #007BFF;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.reference-links ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.reference-links ul li a:hover {
+    color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .explore-temple h2 {
+        font-size: 2rem;
+    }
+
+    .explore-temple p {
+        font-size: 1rem;
+    }
+
+    .video-section iframe {
+        height: 200px;
+    }
+
+    .explore-content {
+        gap: 20px;
+    }
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
